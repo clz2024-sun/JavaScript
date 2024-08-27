@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>js공부</title>
+        
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+        <h2>변수의 범위</h2>
+        
+<!-- ------------------------------------------- -->
+<script>
+    /*
+    let str ='global';
+
+    //함수정의
+    function checkScope(){
+        let str = 'local';
+        console.log(str);
+    }
+
+    checkScope();
+
+    console.log(str);
+    */
+////////////////////////////////////////////////////
+    let str = 'global';
+    let str2;   //checkScope 초기화
+    
+    function checkScope(){
+        str = 'local';
+        str2 = '로컬';
+        console.log(str);
+    }
+
+   // checkScope();    //global --> local
+
+    console.log(str);  //local
+    console.log(str2);
+
+
+</script>
+<!-- ------------------------------------------- -->
+    </body>
+</html>

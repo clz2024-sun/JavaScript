@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>js공부</title>
+        
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+        <h2>배열</h2>
+        
+<!-- ------------------------------------------- -->
+<script>
+    let arr00 = new Array();
+    arr00[0] = 1;
+    arr00[1] = 2;
+    arr00[3] = 3;
+    console.log(arr00[3]);
+    console.log('------------------------------------');
+
+    /////////////////////////////////////
+    let arr01 = [10, 20, 30, 40, 50];
+    console.log(arr01[0]);
+    console.log(arr01[3]);
+   
+    let no = arr01[2];
+    console.log(no);
+
+    arr01[6] = 60;
+    console.log(arr01[6]);
+    console.log('------------------------------------');
+    
+    let arr02 = []  //배열
+    arr02[0] = 1;
+    arr02[1] = 2;
+    arr02[2] = 3;
+
+    //전체출력하기
+    for(let i=0; i<arr02.length; i++){
+        arr02[i];
+    }
+
+    console.log('------------------------------------');
+    let aaa = function (){
+        console.log("정우성");
+    }
+    
+    let arr04 = []; // 1  2.5  '안녕'  'hello!'  5>3  function
+    arr04[0] = 1;
+    arr04[1] = 2.5;
+    arr04[2] = '안녕';
+    arr04[3] = 'hello';
+    arr04[4] = 5>3;
+    arr04[5] = function (){      //익명함수, arr04[5]의 자료형은 function
+        console.log("정우성");
+    };
+
+    for(let i=0; i<arr04.length; i++){
+
+        if( typeof arr04[i] === 'function'){
+            arr04[i]();
+        }else {
+            console.log(arr04[i]); 
+        }
+
+    }
+   
+    arr04[5]();
+    //* 변수에는 메소드를 넣을수 있다
+    //* 변수를 값을 읽는다.
+    //* 메소드를 읽는다 와 메소드를 실행한다를 구분해라
+
+    console.log('------------------------------------');
+    let arr05 = [1, 2.5, '안녕', ['정우성', '박명수', '유재석'] ]
+
+    console.log(arr05[1]);
+    console.log(arr05[3][2]);
+    
+    console.log('------------------------------------');
+    let arr06 = ['이효리'];
+    arr06.push('정우성');
+    arr06.push('박명수');
+    arr06.push('유재석');
+
+    for(let i=0; i<arr06.length; i++){
+        console.log(arr06[i]);
+    }
+
+    arr06.pop();
+    console.log(arr06);
+
+
+</script>
+<!-- ------------------------------------------- -->
+    </body>
+</html>
