@@ -17,12 +17,42 @@
 		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
 		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
 	</ul>
-
-
-</body>
-
+<!------------------------------------------------->
 <script>
 
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('DOM tree완료');
+
+	//id=second
+	let seTag = document.getElementById('second');
+	console.dir(seTag);
+	seTag.style.color='#ff0000'
+
+	//id=third  blue
+	let thTag = document.getElementById('third');
+	console.dir(thTag);
+	seTag.style.color='#0000ff'
+
+	//id=fourth   green
+	let foTag = document.getElementById('fourth');
+	console.dir(foTag);
+	foTag.style.color='#00ff00';
+
+	//id=first   분홍 (동일한 아이디2개) --> 맨위에 1개만 적용됨
+	let fiTag = document.getElementById('first');
+	console.log(fiTag);
+	fiTag.style.color='#ff00ff';
+});
+
+window.addEventListener('load', function(){
+	console.log('페인팅까지 완료');
+} );
+
+
+
 </script>
+<!------------------------------------------------->
+</body>
+
 
 </html>

@@ -19,11 +19,29 @@
 	</ul>
 
 
-</body>
-
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+	
+	//클래스명이 red인 태그의 첫번째를 빨간색으로
+	let redTags = document.getElementsByClassName('red');
+	console.log(redTags);
+	redTags[0].style.color='#ff0000';
+
+	//클래스명이 blue인 태그의 두번째를 초록색으로
+	let boleTags = document.getElementsByClassName('blue');
+	boleTags[1].style.color='#00ff00';
+});
+
+
+
+
 
 
 </script>
+
+
+</body>
+
+
 
 </html>

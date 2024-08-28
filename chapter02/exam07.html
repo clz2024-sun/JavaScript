@@ -50,9 +50,58 @@
 		</tbody>
 	</table>
 
-</body>
 
 <script>
+//DOM tree완료
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
+
+	//h1 태그의 부모 요소
+	let tag01 = document.querySelector('h1');
+	console.log(tag01);
+	console.log(tag01.parentElement);
+
+	console.log("==============================================");
+
+	//클래스명이 red 의 부모 요소
+	let tag02 = document.querySelector('.red');
+	console.log(tag02);
+	console.log(tag02.parentElement);
+
+	console.log("==============================================");
+	//id  n-3의 부모 요소
+	let tag03 = document.querySelector('#n-3');
+	console.log(tag03);
+	console.log(tag03.parentElement);
+
+	console.log("==============================================");
+	//이효리 핸드폰 td
+	let tag04 = document.querySelector('#h-2');
+	console.log(tag04);
+	
+	//#h-2 위치일때  본인의 tr의 id값 출력
+	console.log(tag04.id);
+
+	//#h-2 위치일때  이효리 이름출력	
+	console.log(tag04.previousElementSibling.innerHTML);
+
+	//#h-2 위치일때  이효리 회사번호
+	console.log(tag04.nextElementSibling.textContent);
+
+	//#h-2 위치일때  정우성 회사번호	
+	console.log(tag04.parentElement.previousElementSibling.lastElementChild.textContent);
+
+	//#h-2 위치일때  박명수 이름출력
+	console.log(tag04.parentElement.nextElementSibling.firstElementChild.textContent);
+
+});
+
+
+
 </script>
+
+</body>
+
+
 
 </html>

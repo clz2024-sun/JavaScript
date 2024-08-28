@@ -17,11 +17,61 @@
 
 	<p id="p01">문장1</p>
 	<p id="p02">문장2</p>
-</body>
 
 <script>
+//DOM tree완료되었을때
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
+
+	//<input id="txt-userId" class="form-txt" type="text" name="userId" value="jung" placeholder="아이디를 입력해주세요">
+	let tag01 = document.querySelector('#txt-userId');
+	console.log(tag01)
+
+	tag01.id='t-id';
+	tag01.className='f-txt';   
+
+	tag01.type = 'password';
+	tag01.name = 'u-id';
+	tag01.value = '정우성';
+	tag01.placeholder = '이름입력';
+
+	tag01.tagName = 'DIV';   //태그네임은 변경되지 않는다.
+
+
+	console.log(tag01.id);
+	console.log(tag01.className);
+	console.log(tag01.type);
+	console.log(tag01.name);
+	console.log(tag01.value);
+	console.log(tag01.placeholder);	
+
+	console.log(tag01.tagName);	
+
+
+	//속성변경 실습
+	//<a href="https://www.naver.com" target="_blank">네이버</a>
+
+	//구글  자신의창  이동도 구글 https://www.google.com
+	let tag02 = document.querySelector('a');
+	console.log(tag02);	
+
+	//href 변경
+	tag02.href='https://www.google.com';
+
+	//target 변경
+	tag02.target='_self';
+
+	//컨텐츠 변경
+	//tag02.innerHTML='구글';
+	tag02.textContent='구글';
+
+});
 
 
 </script>
+
+</body>
+
+
 
 </html>
