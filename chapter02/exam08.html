@@ -51,6 +51,42 @@
 	</table>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
+
+	let personList = [];
+
+	let trTags = document.querySelectorAll('tbody>tr');
+	console.log(trTags);
+
+	trTags.forEach()
+
+	for(let i=0; i<trTags.length; i++){
+		let name = trTags[i].children[0].textContent;
+		let hp = trTags[i].children[1].textContent;
+		let company = trTags[i].children[2].textContent;
+	
+		let personVo = {
+			name: name,
+			hp: hp,
+			company: company
+		}
+		console.log(personVo);
+		console.log(personVo.name);
+
+		personList.push(personVo);
+	}
+
+	console.log(personList);
+
+	console.log("----------------------------");
+	for(let i=0; i<personList.length; i++){
+		console.log(personList[i].name);
+	}
+	
+});
+
+
 </script>
 
 </body>

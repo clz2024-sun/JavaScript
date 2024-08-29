@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+  
+</style>
+
+
+</head>
+
+<body>
+   
+    <ul>
+        <li>첫번째 아이템 입니다.</li>
+        <li>두번째 아이템 입니다.</li>
+        <li>세번째 아이템 입니다.</li>
+        <li>네번째 아이템 입니다.</li>
+        <li>다섯번째 아이템 입니다.</li>
+        <li>여섯번째 아이템 입니다.</li>
+        <li>일곱번째 아이템 입니다.</li>
+        <li>여덟번째 아이템 입니다.</li>
+        <li>아홉번째 아이템 입니다.</li>
+        <li>열번째 아이템 입니다.</li>
+    </ul>
+    
+    <p>안녕하세요</p>
+   
+<script>
+//DOM Tree완료 되었을때
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('완료');
+
+    /*
+    let pTag = document.querySelector('p');
+    pTag.addEventListener('click', function(){
+        console.log('p요소 이벤트 실행');
+    });
+    */
+
+    let liTags = document.querySelectorAll('li');
+    console.log(liTags);
+
+    for(let i=0; i<liTags.length; i++){
+        liTags[i].addEventListener('click', function(event){
+            console.log('0삭제');
+            
+            console.log(this);   
+            //this.remove();
+            //this.textContent = '';
+
+            console.log(event.target);
+            //event.target.remove();
+            event.target.textContent = ''
+           
+        });
+    }
+
+
+});
+
+
+
+</script>
+
+</body>
+
+
+
+</html>

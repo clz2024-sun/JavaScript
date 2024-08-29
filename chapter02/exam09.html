@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="" rel="stylesheet">
+<style>
+	#p2 {
+		color: #ff0000;
+	}
+
+</style>
 
 </head>
 
@@ -17,11 +23,49 @@
 		<li>여섯번째아이템입니다.</li>
 	</ul>
 	
-
-</body>
+	<p id="p1" style="color: #0000ff">안녕하세요</p>
+	<p id="p2" class="btn btn-blue" >반갑습니다.</p>
 
 <script>
+//DOM tree 완성된 직후
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
+
+	let ulTag = document.querySelector('ul');
+	console.log(ulTag);
+
+	ulTag.style.fontSize = '40px';  //폰트사이즈
+	ulTag.style.border = '1px solid #ff0000'; //선
+	
+	ulTag.firstElementChild.style.fontFamily = '궁서';  //글꼴
+	ulTag.firstElementChild.style.backgroundColor = '#d6d6d6';  //배경색
+	ulTag.firstElementChild.style.width = '400px'; //가로
+	ulTag.firstElementChild.style.padding = '10px'; //패딩
+	ulTag.firstElementChild.style.marginLeft = '50px'; //마진
+
+	ulTag.lastElementChild.style.borderWidth = '5px';    //선두께
+	ulTag.lastElementChild.style.borderStyle = 'dotted'; //선모양
+	ulTag.lastElementChild.style.borderColor = '#ff0000';//선색
+
+	ulTag.style.listStyleType = 'none'; //리스트의 블릿 안보이게
+
+
+	let p1Tag = document.querySelector('#p1');
+	console.log(p1Tag);
+	console.log(p1Tag.style.color);
+
+	let p2Tag = document.querySelector('#p2');
+	console.log(p2Tag);
+	console.log(p2Tag.style.color);
+
+	p2Tag.style.color = '#ff00ff';
+
+
+});
 
 </script>
+
+
+</body>
 
 </html>

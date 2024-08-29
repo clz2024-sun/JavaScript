@@ -20,10 +20,51 @@
         <button id="btnPlus" type="button" >더하기</button>
         <p id="display">0</p>
     </div>
-</body>
 
 <script>
+//DOM Tree가 완성되었을때 (이벤트)
+document.addEventListener('DOMContentLoaded', function(){
+    console.log("DOM Tree 완료");
+
+    let btnTag = document.querySelector('#btnPlus');
+    console.dir(btnTag);
+
+    //버튼을 클릭했을때 (이벤트)
+    btnTag.addEventListener('click', function(){
+        console.log('버튼클릭');
+
+        //태그가져오기
+        let leftTag = document.querySelector('#left');
+        let rightTag = document.querySelector('#right');
+        let displayTag = document.querySelector('#display');
+
+        //왼쪽 값 구하기
+        let leftNo = Number(leftTag.value);
+
+        //오른쪽 값 구하기
+        let rightNo = Number(rightTag.value);
+
+        //계산하기
+        let sum = leftNo + rightNo;
+
+        //출력하기
+        displayTag.textContent = sum;
+
+        //숫자비우기
+        leftTag.value = '';
+        rightTag.value = '';
+
+    });
+
+
+});
+
+
 
 </script>
+
+</body>
+
+
 
 </html>

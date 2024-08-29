@@ -19,12 +19,31 @@
     </div>
     
 
+<script>
+//DOM Tree 생성되었을때
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('완료');
+
+    let btnTag = document.querySelector('#btn');
+    console.dir(btnTag);
+
+    //버튼이 클릭될때  에게 이상황이되면 이이일을 해
+    btnTag.addEventListener('click', function(){
+        console.log('버튼클릭');
+
+        let h1Tag = document.querySelector('#display');
+        console.log(h1Tag);
+        h1Tag.textContent = '홍길동';
+        h1Tag.style.color = '#0000ff';
+    });
+
+});
+
+</script>  
+
 
 </body>
 
-<script>
 
-
-</script>
 
 </html>
