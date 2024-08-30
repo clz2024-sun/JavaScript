@@ -28,6 +28,32 @@
 	</div>
 	<br>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('완료');
+
+	let btnWrite = document.querySelector('#btnWrite');
+	
+	//버튼을 클릭했을때 이벤트 안쪽에 넣어도됨
+	let txtName = document.querySelector('[name="name"]');
+	let txtPw = document.querySelector('[name="pw"]');
+	let txtContent = document.querySelector('[name="content"]');
+
+	//버튼을 클릭했을때
+	btnWrite.addEventListener('click', function(){
+		console.log('클릭');
+		let guestbookVo = {
+			name: txtName.value,
+			password: txtPw.value,
+			content: txtContent.value
+		}
+		console.log(guestbookVo);
+	});
+
+});
+
+</script>
 </body>
 
 <script>
